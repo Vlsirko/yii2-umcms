@@ -3,7 +3,7 @@
     "description": "Admin Panel",
 	"type": "yii2-extension",
     "keywords": ["yii2","extension"],
-	"minimum-stability":"dev",
+	
     "authors": [
         {
             "name": "Sirenko Vlad",
@@ -22,7 +22,7 @@
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
 		"Vlsirko/yii2-rbac" : "dev-master",
-		"zxbodya/yii2-gallery-manager": "*@dev"
+		"zxbodya/yii2-gallery-manager": "dev-master"
     },
 	"repositories" : [
 		 {
