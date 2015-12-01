@@ -19,7 +19,7 @@
 		{
 			"type": "package",
 			"package": {
-				"name": "Vlsirko/yii2-rbac",
+				"name": "V2lsirko/yii2-rbac",
 				"version": "master",
 				"source": {
 					"url": "https://github.com/Vlsirko/yii2-rbac.git",
@@ -33,7 +33,7 @@
 		"dmstr/yii2-adminlte-asset": "2.*",
 		"iutbay/yii2-fontawesome": "*",
 		"iutbay/yii2-kcfinder": "*",
-		"Vlsirko/yii2-rbac": "master",
+		"V2lsirko/yii2-rbac": "master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
 	}
 
