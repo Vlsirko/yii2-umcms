@@ -24,6 +24,7 @@
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
 		"Vlsirko/yii2-rbac" : "dev-master",
+		"Vlsirko/yii2-uploads" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
     }
 	
