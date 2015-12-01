@@ -1,0 +1,35 @@
+{
+    "name": "vlsirko/yii2-rbac",
+    "description": "Admin Panel",
+	"type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "authors": [
+        {
+            "name": "Sirenko Vlad",
+            "email": "Vlsirko89@gmail.com"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "Umcms\\": ""
+        }
+    },
+	"require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+		"dmstr/yii2-adminlte-asset" : "2.*",
+		"sunhater/kcfinder": "dev-master",
+		"iutbay/yii2-fontawesome" : "*",
+		"iutbay/yii2-kcfinder" : "*",
+		"vlsirko/yii2-rbac" : "dev-master",
+		"zxbodya/yii2-gallery-manager": "*@dev"
+    },
+	"repositories" : [
+		{
+			"url" : "https://github.com/Vlsirko/yii2-rbac.git",
+			"type" : "git"
+		}
+	]
+}
