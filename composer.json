@@ -17,10 +17,7 @@
 	"require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.6",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
 		"dmstr/yii2-adminlte-asset" : "2.*",
-		"sunhater/kcfinder": "dev-master",
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
 		"vlsirko/yii2-rbac" : "dev-master",
@@ -29,6 +26,10 @@
 	"repositories" : [
 		{
 			"url" : "https://github.com/Vlsirko/yii2-rbac.git",
+			"type" : "git"
+		},
+		{
+			"url" : "https://github.com/sunhater/kcfinder.git",
 			"type" : "git"
 		}
 	]
