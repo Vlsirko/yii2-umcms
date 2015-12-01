@@ -25,12 +25,16 @@
     },
 	"repositories" : [
 		{
-			"url" : "https://github.com/Vlsirko/yii2-rbac.git",
-			"type" : "git"
-		},
-		{
-			"url" : "https://github.com/sunhater/kcfinder.git",
-			"type" : "git"
+			"type":"package",
+			"package": {
+			  "name": "vlsirko/yii2-rbac",
+			  "version":"master",
+			  "source": {
+				  "url": "https://github.com/Vlsirko/yii2-rbac.git",
+				  "type": "git",
+				  "reference":"master"
+				}
+			}
 		}
 	]
 }
