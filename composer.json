@@ -2,7 +2,7 @@
     "name": "vlsirko/yii2-umcms",
     "description": "Admin Panel",
 	"type": "yii2-extension",
-	"minimum-stability": "dev",
+	 "minimum-stability": "dev",
     "keywords": ["yii2","extension"],
 	
     "authors": [
@@ -27,7 +27,6 @@
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
-		"Vlsirko/yii2-rbac" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
     }
 	
