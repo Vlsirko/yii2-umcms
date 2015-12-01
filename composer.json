@@ -20,13 +20,21 @@
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
-		"vlsirko/yii2-rbac" : "dev-master",
+		"vlsirko/yii2-rbac" : "1.0",
 		"zxbodya/yii2-gallery-manager": "*@dev"
     },
 	"repositories" : [
 		{
-			"url" : "https://github.com/Vlsirko/yii2-rbac.git",
-			"type" : "git"
-		}
+			"type": "package",
+			"package": {
+				"name": "vlsirko/yii2-rbac",
+				"version": "1.0",
+				"source": {
+					"url": "https://github.com/Vlsirko/yii2-rbac.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+}
 	]
 }
