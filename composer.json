@@ -17,7 +17,7 @@
     },
 	"repositories" : [
 		{
-            "type": "git",
+            "type": "yii2-extension",
             "url": "https://github.com/Vlsirko/yii2-rbac.git"
         }
 	],
