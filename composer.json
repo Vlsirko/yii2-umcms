@@ -19,8 +19,8 @@
 	
 	"repositories" : [
 		 {
-            "type": "git",
-            "url": "https://github.com/Vlsirko/yii2-rbac.git"
+            "type": "vcs",
+            "url": "https://github.com/Vlsirko/yii2-rbac"
         }
 	],
 	
