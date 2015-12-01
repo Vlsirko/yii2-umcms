@@ -16,17 +16,12 @@
             "Umcms\\": "Umcms/"
         }
     },
-	"repositories" : [
-		{
-            "type": "vcs",
-            "url": "https://github.com/Vlsirko/yii2-rbac"
-        }
-	],
 	
 	"require": {
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
+		"Vlsirko/yii2-rbac" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
     }
 	
