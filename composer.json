@@ -25,16 +25,8 @@
     },
 	"repositories" : [
 		{
-			"type":"package",
-			"package": {
-			  "name": "vlsirko/yii2-rbac",
-			  "version":"master",
-			  "source": {
-				  "url": "https://github.com/Vlsirko/yii2-rbac.git",
-				  "type": "git",
-				  "reference":"master"
-				}
-			}
+			"url" : "https://github.com/Vlsirko/yii2-rbac.git",
+			"type" : "git"
 		}
 	]
 }
