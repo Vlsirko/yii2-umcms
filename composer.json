@@ -1,40 +1,30 @@
 {
-	"name": "vlsirko/yii2-umcms",
-	"description": "Admin Panel",
+    "name": "vlsirko/yii2-umcms",
+    "description": "Admin Panel",
 	"type": "yii2-extension",
-	"minimum-stability": "dev",
-	"keywords": ["yii2", "extension"],
-	"authors": [
-		{
-			"name": "Sirenko Vlad",
-			"email": "Vlsirko89@gmail.com"
-		}
-	],
+    "keywords": ["yii2","extension"],
+	
+    "authors": [
+        {
+            "name": "Sirenko Vlad",
+            "email": "Vlsirko89@gmail.com"
+        }
+    ],
 	"autoload": {
-		"psr-4": {
-			"Umcms\\": "Umcms/"
-		}
-	},
-	"repositories": [
-		{
-			"type": "package",
-			"package": {
-				"name": "V2lsirko/yii2-rbac",
-				"version": "master",
-				"source": {
-					"url": "https://github.com/Vlsirko/yii2-rbac.git",
-					"type": "git",
-					"reference": "master"
-				}
-			}
-		}
+        "psr-4": {
+            "Umcms\\": "Umcms/"
+        }
+    },
+	"repositories" : [
+		
 	],
+	
 	"require": {
-		"dmstr/yii2-adminlte-asset": "2.*",
-		"iutbay/yii2-fontawesome": "*",
-		"iutbay/yii2-kcfinder": "*",
-		"V2lsirko/yii2-rbac": "master",
+		"dmstr/yii2-adminlte-asset" : "2.*",
+		"iutbay/yii2-fontawesome" : "*",
+		"iutbay/yii2-kcfinder" : "*",
+		"Vlsirko/yii2-rbac" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
-	}
-
+    }
+	
 }
