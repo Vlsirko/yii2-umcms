@@ -21,7 +21,7 @@
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
 		"iutbay/yii2-kcfinder" : "*",
-		"vlsirko/yii2-rbac" : "dev-master",
+		"Vlsirko/yii2-rbac" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "*@dev"
     },
 	"repositories" : [
