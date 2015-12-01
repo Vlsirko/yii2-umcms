@@ -2,6 +2,7 @@
     "name": "vlsirko/yii2-umcms",
     "description": "Admin Panel",
 	"type": "yii2-extension",
+	"minimum-stability": "dev",
     "keywords": ["yii2","extension"],
 	
     "authors": [
