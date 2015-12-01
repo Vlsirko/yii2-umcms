@@ -10,21 +10,26 @@
             "email": "Vlsirko89@gmail.com"
         }
     ],
+	
 	"autoload": {
         "psr-4": {
             "Umcms\\": "Umcms/"
         }
     },
-	"require": {
-		"dmstr/yii2-adminlte-asset" : "2.*",
-		"iutbay/yii2-fontawesome" : "*",
-		"iutbay/yii2-kcfinder" : "*",
-		"zxbodya/yii2-gallery-manager": "*@dev"
-    },
+	
 	"repositories" : [
 		 {
             "type": "git",
             "url": "https://github.com/Vlsirko/yii2-rbac.git"
         }
-	]
+	],
+	
+	"require": {
+		"dmstr/yii2-adminlte-asset" : "2.*",
+		"iutbay/yii2-fontawesome" : "*",
+		"iutbay/yii2-kcfinder" : "*",
+		"vlsirko/yii2-rbac" : "dev-master",
+		"zxbodya/yii2-gallery-manager": "*@dev"
+    }
+	
 }
