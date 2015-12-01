@@ -17,10 +17,11 @@
     },
 	"repositories" : [
 		{
-            "type": "yii2-extension",
-            "url": "https://github.com/Vlsirko/yii2-rbac.git"
+            "type": "vcs",
+            "url": "https://github.com/Vlsirko/yii2-rbac"
         }
 	],
+	
 	"require": {
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
@@ -28,4 +29,5 @@
 		"Vlsirko/yii2-rbac" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
     }
+	
 }
