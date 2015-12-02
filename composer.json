@@ -22,7 +22,7 @@
 	"require": {
 		"dmstr/yii2-adminlte-asset" : "2.*",
 		"iutbay/yii2-fontawesome" : "*",
-		"iutbay/yii2-kcfinder" : "*",
+		"iutbay/yii2-kcfinder" : "dev-master",
 		"Vlsirko/yii2-rbac" : "dev-master",
 		"Vlsirko/yii2-uploads" : "dev-master",
 		"zxbodya/yii2-gallery-manager": "dev-master"
