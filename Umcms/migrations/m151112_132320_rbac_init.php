@@ -23,7 +23,7 @@ class m151112_132320_rbac_init extends Migration
 			\Yii::$app->authManager->addChild($role, $p);
 		}
 		
-		$me = User::findByEmail('test@loc');
+		$me = User::findByEmail('test@loc.loc');
 		\Yii::$app->authManager->assign($role, $me->getId());
 	
     }
