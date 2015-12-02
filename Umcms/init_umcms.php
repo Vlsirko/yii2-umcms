@@ -9,6 +9,8 @@
 $pathToBackend = __DIR__ . '/../../../../backend';
 $pathToFrontend = __DIR__ . '/../../../../frontend';
 $pathToConsole = __DIR__ . '/../../../../console';
+$pathToCommon = __DIR__ . '/../../../../common';
+
 $pathToUploadBackend = $pathToBackend . '/web/upload';
 $pathToUploadFrontend = $pathToFrontend . '/web/upload';
 $pathToRoot = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..','..', '..',]);
@@ -68,8 +70,31 @@ $moduleConfig = [
 $moduleConfig = var_export($moduleConfig, true);
 $consoleConfig = preg_replace("#('components' => \[(.|\n)+\],)#mi", "$1\n'modules' => $moduleConfig,", $consoleConfig);
 file_put_contents($pathToConsoleConfig, $consoleConfig) ;
-print('Rewrite config file success' . PHP_EOL);
 
+
+
+$pathToCommonConfig = implode(DIRECTORY_SEPARATOR, [$pathToCommon, 'config', 'main.php']);
+$moduleConfiguration = <<<EOF
+<?php
+return [
+    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'components' => [
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+        ],
+		'urlManager' => [
+			'class' => 'yii\web\UrlManager',
+				'showScriptName' => false,
+				'enablePrettyUrl' => true,
+		],
+		'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
+    ],
+];	
+EOF;
+file_put_contents($pathToCommonConfig, $moduleConfiguration);
+print('Rewrite config file success' . PHP_EOL);
 
 
 print('Copying migrations to base path' . PHP_EOL);
