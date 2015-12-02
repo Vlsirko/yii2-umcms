@@ -40,7 +40,8 @@ $pathToBackendConfig = $pathToBackend . '/config/main.php';
 $toRewrite = [
 	'basePath' => '\'' . __DIR__ . '\'',
 	'modules' =>   'require ("' . implode(DIRECTORY_SEPARATOR, [__DIR__, 'config', 'modules.php']) . '")',
-	'identityClass' => "'Umcms\models\User'"
+	'identityClass' => "'Umcms\models\User'",
+	'controllerNamespace' => "'Umcms\controllers'"
 ];
 $config = file_get_contents($pathToBackendConfig);
 
