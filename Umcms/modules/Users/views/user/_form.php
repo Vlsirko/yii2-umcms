@@ -24,7 +24,7 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 
 	<?= $form->field($model, 'password')->passwordInput() ?>
 
-	<?= $form->field($model, 'image')->widget(Kcfinder::className(), ['multiple'=>true]) ?>
+	<?= $form->field($model, 'image')->widget(Kcfinder::className(), []) ?>
 
 	<?php
 		/*if ($model->isNewRecord) {
