@@ -25,6 +25,7 @@ class m151106_072252_create_text_user extends Migration
 		$me = new User();
 		$me->email = $userNameString;
 		$me->password = $userPasswordString;
+		$me->status = User::STATUS_ACTIVE;
 		$me->save();
 	}
     

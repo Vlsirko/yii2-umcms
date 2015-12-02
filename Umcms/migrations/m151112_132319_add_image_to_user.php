@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m151123_061626_add_image_to_user extends Migration
+class m151112_132319_add_image_to_user extends Migration
 {
   
     

@@ -28,7 +28,7 @@ use zxbodya\yii2\galleryManager\GalleryBehavior;
 class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 
 	const STATUS_DISABLED = 0;
-	const STATUS_ENABLED = 1;
+	const STATUS_ENABLED = 10;
 	const UPDATE_SCENARIO = 'on update';
 	const CREATE_SCENARIO = 'on create';
 
@@ -42,44 +42,19 @@ class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 		return [
 			TimestampBehavior::className(),
 			SaveUserRole::className(),
-			/*'uploadFile' => [
+			'uploadFile' => [
 				'class' => UploadBehaviour::className(),
 				'fields' => ['image'],
 				'allowedFileExtentions' => ['png', 'jpg']
-			],*/
+			],
 			
-			'galleryBehavior' => [
+			/*'galleryBehavior' => [
 				'class' => GalleryBehavior::className(),
 				'type' => 'image',
 				'extension' => 'jpg',
 				'directory' => Yii::getAlias('@webroot') . '/files/User/' . $this->id . '/gallery',
 				'url' => Yii::getAlias('@web') . '/files/User/' . $this->id . '/gallery',
-				/*'versions' => [
-					'small' => function ($img) {
-						
-						return $img
-								->copy()
-								->thumbnail(new \Imagine\Image\Box(200, 200));
-					},
-					'medium' => function ($img) {
-					
-						$dstSize = $img->getSize();
-						$maxWidth = 800;
-						if ($dstSize->getWidth() > $maxWidth) {
-							$dstSize = $dstSize->widen($maxWidth);
-						}
-						return $img
-								->copy()
-								->resize($dstSize);
-					},
-				]*/
-			]
-			/* 'uploadMultipleFiles' => [
-			  'class' => UploadBehaviour::className(),
-			  'fields' => ['image_path'],
-			  'allowedFileExtentions' => ['png', 'jpg'],
-			  'multiple' => true
-			  ] */
+			]*/
 		];
 	}
 
@@ -256,7 +231,7 @@ class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 			[['username', 'password_hash', 'password', 'password_reset_token', 'email'], 'string', 'max' => 255],
 			[['email'], 'unique'],
 			[['email'], 'email'],
-			[['image', 'image_path', 'password'], 'safe'],
+			[['image', 'password'], 'safe'],
 			['status', 'default', 'value' => self::STATUS_ENABLED],
 			['status', 'in', 'range' => [self::STATUS_ENABLED, self::STATUS_DISABLED]],
 		];

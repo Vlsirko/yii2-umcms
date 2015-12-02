@@ -24,20 +24,20 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 
 	<?= $form->field($model, 'password')->passwordInput() ?>
 
-	
+	<?= $form->field($model, 'image')->widget(Kcfinder::className(), ['multiple'=>true]) ?>
 
 	<?php
-	if ($model->isNewRecord) {
-		echo 'Can not upload images for new record';
-	} else {
-		echo GalleryManager::widget(
-			[
-				'model' => $model,
-				'behaviorName' => 'galleryBehavior',
-				'apiRoute' => 'galleryApi'
-			]
-		);
-	}
+		/*if ($model->isNewRecord) {
+			echo 'Can not upload images for new record';
+		} else {
+			echo GalleryManager::widget(
+				[
+					'model' => $model,
+					'behaviorName' => 'galleryBehavior',
+					'apiRoute' => 'galleryApi'
+				]
+			);
+		}*/
 	?>
     <div class="form-group">
 		<?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
