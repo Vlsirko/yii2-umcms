@@ -18,7 +18,7 @@ $baseMigrationPath = implode(DIRECTORY_SEPARATOR, [$pathToRoot, 'console', 'migr
 $vendorDir = implode(DIRECTORY_SEPARATOR, [$pathToRoot, '', 'vendor']);
 
 if (!is_dir($pathToUploadBackend)) {
-	mkdir($pathToUploadBackend, 0777, true);
+	mkdir($pathToUploadBackend, 777, true);
 	print('Upload dir is created' . PHP_EOL);
 }
 
