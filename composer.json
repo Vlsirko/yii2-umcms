@@ -3,7 +3,6 @@
     "description": "Admin Panel",
 	"type": "yii2-extension",
     "keywords": ["yii2","extension"],
-    "minimum-stability" : "stable",
     "authors": [
         {
             "name": "Sirenko Vlad",
