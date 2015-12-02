@@ -17,6 +17,8 @@ if (!is_dir($pathToUploadBackend)) {
 	print('Upload dir is created' . PHP_EOL);
 }
 
+chmod(__DIR__ . DIRECTORY_SEPARATOR . 'runtime', 0777);
+
 /**
  * create symlink to frontend
  */
