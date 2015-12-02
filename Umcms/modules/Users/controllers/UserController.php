@@ -164,18 +164,4 @@ class UserController extends Controller implements ObservableRbacController {
 			'updatemyprofile' => 'Редактирование своего профиля'
 		];
 	}
-
-	public function actions()
-	{
-		return [
-			'galleryApi' => [
-				'class' => GalleryManagerAction::className(),
-				// mappings between type names and model classes (should be the same as in behaviour)
-				'types' => [
-					'image' => 'Umcms\models\User'
-				]
-			],
-		];
-	}
-
 }
