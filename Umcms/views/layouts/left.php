@@ -43,7 +43,7 @@
 					'icon' => 'fa fa-user', 
 					'url' => '/users'
 				],
-				'rbac\roles\index' => [
+				'rbac/roles/index' => [
 					'label'=>'Группы пользователей',
 					'icon' => 'fa fa-users', 
 					'url' => '/rbac'
