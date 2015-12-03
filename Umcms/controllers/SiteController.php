@@ -7,6 +7,7 @@ use yii\web\Controller;
 use Umcms\models\LoginForm;
 use yii\filters\VerbFilter;
 use zxbodya\yii2\galleryManager\GalleryManagerAction;
+use Umcms\models\User;
 
 /**
  * Site controller
