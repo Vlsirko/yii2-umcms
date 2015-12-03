@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use Umcms\models\LoginForm;
 use yii\filters\VerbFilter;
+use zxbodya\yii2\galleryManager\GalleryManagerAction;
 
 /**
  * Site controller
@@ -39,6 +40,13 @@ class SiteController extends Controller
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            'gallery' => [
+				'class' => GalleryManagerAction::className(),
+				// mappings between type names and model classes (should be the same as in behaviour)
+				'types' => [
+					'user' => User::className()
+				]
+			],
         ];
     }
 	
