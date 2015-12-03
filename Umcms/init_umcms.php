@@ -103,7 +103,8 @@ print('Copying migrations to base path' . PHP_EOL);
 $migrationsDirs = [
 	implode(DIRECTORY_SEPARATOR, [$vendorDir, 'yiisoft', 'yii2', 'rbac', 'migrations']), //path to yii2 rbac migration
 	__DIR__ . DIRECTORY_SEPARATOR . 'migrations',
-	__DIR__ . implode(DIRECTORY_SEPARATOR, ['', '..', '..', 'yii2-rbac', 'migrations'])
+	__DIR__ . implode(DIRECTORY_SEPARATOR, ['', '..', '..', 'yii2-rbac', 'migrations']),
+	__DIR__ . implode(DIRECTORY_SEPARATOR, ['', '..', '..', 'yii2-uploads', "Uploads" , 'migrations'])
 ];
 
 foreach($migrationsDirs as $dir){

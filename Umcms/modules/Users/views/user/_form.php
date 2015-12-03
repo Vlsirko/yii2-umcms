@@ -6,6 +6,7 @@ use Umcms\models\User;
 use Rbac\models\Permitions\Role;
 use Uploads\widgets\Kcfinder;
 use zxbodya\yii2\galleryManager\GalleryManager;
+use Uploads\widgets\FileCollection\FileCollectionWidget;
 
 /* @var $this yii\web\View */
 /* @var $model Umcms\models\User */
@@ -33,7 +34,12 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 	?>
 	<?= $form->field($model, 'password')->passwordInput() ?>
 
-	<?= $form->field($model, 'image')->widget(Kcfinder::className(), ['value' => (string) $model->image]) ?>
+	<?= $form->field($model, 'image')->widget(Kcfinder::className()) ?>
+	
+	<?= $form->field($model, 'file_collection_id[]')->widget(Kcfinder::className(), ['multiple'=> true]); ?>
+	
+	<?= $form->field($model, 'file_collection_id')->widget(FileCollectionWidget::className()); ?>
+	
 
 	<?php
 		if ($model->isNewRecord) {

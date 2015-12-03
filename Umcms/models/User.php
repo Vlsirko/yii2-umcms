@@ -48,6 +48,13 @@ class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 				'allowedFileExtentions' => ['png', 'jpg']
 			],
 			
+			'multipleUploadFile' => [
+				'class' => UploadBehaviour::className(),
+				'fields' => ['file_collection_id'],
+				'allowedFileExtentions' => ['png', 'jpg'],
+				'multiple' => true
+			],
+			
 			'galleryBehavior' => [
 				'class' => GalleryBehavior::className(),
 				'type' => 'user',
@@ -231,7 +238,7 @@ class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 			[['username', 'password_hash', 'password', 'password_reset_token', 'email'], 'string', 'max' => 255],
 			[['email'], 'unique'],
 			[['email'], 'email'],
-			[['image', 'password'], 'safe'],
+			[['image', 'password', 'file_collection_id'], 'safe'],
 			['status', 'default', 'value' => self::STATUS_ENABLED],
 			['status', 'in', 'range' => [self::STATUS_ENABLED, self::STATUS_DISABLED]],
 		];
