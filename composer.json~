@@ -1,0 +1,32 @@
+{
+    "name": "vlsirko/yii2-umcms",
+    "description": "Admin Panel",
+	"type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+    "authors": [
+        {
+            "name": "Sirenko Vlad",
+            "email": "Vlsirko89@gmail.com"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "Umcms\\": "Umcms/"
+        }
+    },
+	"repositories" : [
+		
+	],
+	
+	"require": {
+		"dmstr/yii2-adminlte-asset" : "2.*",
+		"iutbay/yii2-fontawesome" : "*",
+		"iutbay/yii2-kcfinder" : "dev-master",
+		"Vlsirko/yii2-rbac" : "dev-master",
+		"Vlsirko/yii2-uploads" : "dev-master",
+		"zxbodya/yii2-gallery-manager": "dev-master"
+    }
+	
+}
