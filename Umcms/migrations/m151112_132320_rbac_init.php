@@ -2,7 +2,7 @@
 
 use yii\db\Schema;
 use yii\db\Migration;
-use Umcms\models\User;
+use common\models\User;
 
 class m151112_132320_rbac_init extends Migration
 {
@@ -23,7 +23,7 @@ class m151112_132320_rbac_init extends Migration
 			\Yii::$app->authManager->addChild($role, $p);
 		}
 		
-		$me = User::findByEmail('test@loc.loc');
+		$me = User::findByUsername('test@loc.loc');
 		\Yii::$app->authManager->assign($role, $me->getId());
 	
     }
