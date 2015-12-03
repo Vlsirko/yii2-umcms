@@ -18,13 +18,22 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 
 	<?= $form->field($model, 'username')->textInput() ?>
 	<?= $form->field($model, 'email')->textInput() ?>
-	<?= $form->field($model, 'status')->dropDownList(User::getUserStatusList()) ?>
-
-	<?= $form->field($model, 'role')->dropDownList(Role::getAllRolesForDropdown()) ?>
-
+	
+	<?php
+	
+		if(\yii::$app->getUser()->can("rbac/roles/update")){
+			echo $form->field($model, 'role')->dropDownList(Role::getAllRolesForDropdown());
+			
+		}
+		
+		if(\yii::$app->getUser()->can("users/usercontroller/update")){
+			echo $form->field($model, 'status')->dropDownList(User::getUserStatusList());
+		}
+		
+	?>
 	<?= $form->field($model, 'password')->passwordInput() ?>
 
-	<?= $form->field($model, 'image')->widget(Kcfinder::className(), []) ?>
+	<?= $form->field($model, 'image')->widget(Kcfinder::className(), ['value' => (string) $model->image]) ?>
 
 	<?php
 		if ($model->isNewRecord) {

@@ -21,8 +21,8 @@ if (!is_dir($pathToUploadBackend)) {
 	mkdir($pathToUploadBackend, 777, true);
 	print('Upload dir is created' . PHP_EOL);
 }
+chmod(implode(DIRECTORY_SEPARATOR, [$pathToBackend, 'web']), 0777);
 chmod($pathToUploadBackend, 0777);
-chmod(implode(DIRECTORY_SEPARATOR, [$pathToBackend , 'web']), 0777);
 chmod(__DIR__ . DIRECTORY_SEPARATOR . 'runtime', 0777);
 
 /**
