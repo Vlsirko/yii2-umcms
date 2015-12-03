@@ -48,13 +48,13 @@ class User extends RbacAbstractUserActiveRecord implements IdentityInterface {
 				'allowedFileExtentions' => ['png', 'jpg']
 			],
 			
-			/*'galleryBehavior' => [
+			'galleryBehavior' => [
 				'class' => GalleryBehavior::className(),
-				'type' => 'image',
+				'type' => 'user',
 				'extension' => 'jpg',
-				'directory' => Yii::getAlias('@webroot') . '/files/User/' . $this->id . '/gallery',
-				'url' => Yii::getAlias('@web') . '/files/User/' . $this->id . '/gallery',
-			]*/
+				'directory' => Yii::getAlias('@webroot') . '/files/User/gallery',
+				'url' => Yii::getAlias('@web') . '/files/User/gallery',
+			]
 		];
 	}
 

@@ -10,7 +10,7 @@ class m151106_072252_create_text_user extends Migration
     public function safeUp()
     {
 		try{
-			$this->createUser('test@loc', '1111');
+			$this->createUser('test@loc.loc', '1111');
 		}catch(\Exception $e){
 			return false;
 		}
@@ -24,6 +24,7 @@ class m151106_072252_create_text_user extends Migration
 	private function createUser($userNameString, $userPasswordString){
 		$me = new User();
 		$me->email = $userNameString;
+		$me->username = $userNameString;
 		$me->password = $userPasswordString;
 		$me->status = User::STATUS_ACTIVE;
 		$me->save();

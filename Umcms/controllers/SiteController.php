@@ -2,10 +2,11 @@
 namespace Umcms\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller;
 use Umcms\models\LoginForm;
+use Umcms\models\User;
 use yii\filters\VerbFilter;
+use zxbodya\yii2\galleryManager\GalleryManagerAction;
 
 /**
  * Site controller
@@ -34,15 +35,22 @@ class SiteController extends Controller
      * @inheritdoc
      */
     public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-        ];
-    }
+	{
+		return [
+			'error' => [
+				'class' => 'yii\web\ErrorAction',
+			],
+			'gallery' => [
+				'class' => GalleryManagerAction::className(),
+				// mappings between type names and model classes (should be the same as in behaviour)
+				'types' => [
+					'user' => User::className()
+				]
+			],
+		];
+	}
 	
-    public function actionIndex()
+	public function actionIndex()
     {
         return $this->render('index');
     }

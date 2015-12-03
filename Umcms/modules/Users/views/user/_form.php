@@ -27,17 +27,17 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 	<?= $form->field($model, 'image')->widget(Kcfinder::className(), []) ?>
 
 	<?php
-		/*if ($model->isNewRecord) {
+		if ($model->isNewRecord) {
 			echo 'Can not upload images for new record';
 		} else {
 			echo GalleryManager::widget(
 				[
 					'model' => $model,
 					'behaviorName' => 'galleryBehavior',
-					'apiRoute' => 'galleryApi'
+					'apiRoute' => '/site/gallery'
 				]
 			);
-		}*/
+		}
 	?>
     <div class="form-group">
 		<?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
